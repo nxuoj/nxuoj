@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+  datasource:
+    url: jdbc:mysql://localhost:3306/linyi?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong&useLegacyDatetimeCode=false&allowMultiQueries=true
+    username: root
+    password: 123456
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+
+server:
+  port: 8081
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml      # 修改为mapper映射xml文件的所在路径
+  type-aliases-package: com.example.demo.mapper       # 修改为对应实体类的路径
+  configLocation: classpath:/mybatis-config.xml
